@@ -1,0 +1,36 @@
+<app-lista-compras-v2></app-lista-compras-v2>
+
+<mat-card>
+  <mat-card-content>
+    <h1>Lista de compras</h1>
+    <br>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="novoItem">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="adicionar()">Adicionar</button>
+    <br><br>
+    
+    <h2>Itens:</h2>
+
+    <ul>
+      <li *ngFor="let item of itens; let i = index" class="item-linha">
+
+        <span class="item-texto">{{ item }}</span>
+
+        <div class="item-botoes">
+        <button mat-flat-button color="accent" (click)="editar(i)">
+          <mat-icon fontIcon="edit"></mat-icon>
+          Editar
+        </button>
+
+        <button mat-flat-button color="warn" (click)="excluir(i)">
+          <mat-icon fontIcon="delete"></mat-icon>
+          Deletar
+        </button>
+        </div>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

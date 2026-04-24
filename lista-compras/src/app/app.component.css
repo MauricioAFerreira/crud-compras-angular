@@ -1,0 +1,29 @@
+mat-card{
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.item-linha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid;
+}
+
+.item-texto{
+    flex: 1;
+    font-size: 15px;
+    word-break: break-all;
+}
+
+.item-botoes{
+    display: flex;
+    gap: 8px;
+}
+
